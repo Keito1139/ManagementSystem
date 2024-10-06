@@ -1,16 +1,18 @@
-import { Text, View } from "react-native";
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import LoginScreen from '../src/screens/Login'; // ログイン画面のインポート
 
-export default function Index() {
+const Stack = createStackNavigator();
+
+const Index = () => {
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Text>Edit app/index.tsx to edit this screen.</Text>
-      <Text>おはようございます</Text>
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Login">
+        <Stack.Screen name="Login" component={LoginScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
-}
+};
+
+export default Index;

@@ -1,14 +1,10 @@
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
-import LoginScreen from '../src/screens/Login'; // ログイン画面のインポート
-
-const Stack = createStackNavigator();
+import { Stack } from 'expo-router';
 
 const Index = () => {
   return (
-      <Stack.Navigator initialRouteName="Login">
-        <Stack.Screen name="Login" component={LoginScreen} />
-      </Stack.Navigator>
+    <Stack>
+      <Stack.Screen name="login" />
+    </Stack>
   );
 };
 

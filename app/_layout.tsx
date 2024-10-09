@@ -1,10 +1,13 @@
-import { Stack } from "expo-router";
+import { Stack } from 'expo-router';
 
-export default function RootLayout() {
+const Index = () => {
   return (
     <Stack>
-      <Stack.Screen name="index" />
+      <Stack.Screen name='index' />
       <Stack.Screen name="login" />
+      <Stack.Screen name="home" />
     </Stack>
   );
-}
+};
+
+export default Index;

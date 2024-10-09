@@ -1,11 +1,5 @@
-import { Stack } from 'expo-router';
+import { Redirect } from 'expo-router';
 
-const Index = () => {
-  return (
-    <Stack>
-      <Stack.Screen name="login" />
-    </Stack>
-  );
-};
-
-export default Index;
+export default function Index() {
+  return <Redirect href="/login" />;
+}

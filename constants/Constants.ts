@@ -1,0 +1,2 @@
+// app/constants.ts
+export const API_URL = 'http://localhost:8000/api';

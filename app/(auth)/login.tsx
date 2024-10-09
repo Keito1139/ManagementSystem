@@ -3,7 +3,6 @@ import { View, TextInput, Button, Alert, StyleSheet } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import axios from 'axios';
 import { StackNavigationProp } from '@react-navigation/stack';
-import { RouteProp } from '@react-navigation/native';
 
 // RootStackParamListの定義（例）
 type RootStackParamList = {
@@ -23,6 +22,8 @@ type Props = {
 const LoginScreen: React.FC<Props> = ({ navigation }) => {
   const [username, setUsername] = useState<string>('');
   const [password, setPassword] = useState<string>('');
+
+
 
   const handleLogin = async () => {
     try {
